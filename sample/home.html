@@ -1,0 +1,52 @@
+<div class="col-sm-12">
+	<br> <br>
+	<div class="row">
+		<h2 class="text-center control-label">Angular PopUp Service
+			Samples</h2>
+	</div>
+	<div class="container">
+		<div class="row">
+			<hr />
+			<div class="form-group">
+				<label class="control-label text-center"> Simple Alert
+					Message</label>
+				<p>This sample shows a Bootstrap Modal with the options 'Ok'.</p>
+				<p>This sample is used to providing the alert message to the
+					user</p>
+			</div>
+			<button type="button" class="btn btn-primary" ng-click="alert()">Alert</button>
+			<hr />
+			<div class="form-group">
+				<label class="control-label text-center"> Simple Warning
+					Message</label>
+				<p>This sample shows a Bootstrap Modal with the options 'Yes/No'.</p>
+				<p>This sample is used to providing the simple alert message to the
+					user,if the user press Yes then it will process further business,else it will stop</p>
+			</div>
+			<button type="button" class="btn btn-primary" ng-click="Warning()">Warning</button>
+			<br> <br>
+			<div class="well" ng-show="warningMessage">{{warningMessage}}</div>
+			<hr />
+			<div class="form-group">
+				<label class="control-label text-center"> Complex Modal Service</label>
+				<p>This sample shows a Bootstrap Modal with get the values from users.</p>
+				<p>This sample is used to providing the alert message to the
+					user</p>
+			</div>
+			<button type="button" class="btn btn-primary" ng-click="Complex()">Complex</button>
+			<br> <br>
+			<div class="well" ng-show="ComplexObj">{{ComplexObj}}</div>
+			<hr/>
+			
+			<div class="form-group">
+				<label class="control-label text-center">Passing Data to Modal</label>
+				<label class="control-label text-center">Enter Your Name</label>
+				<input type="text" class="form-control" ng-model="postObj.name" placeholder="Enter your Name">
+			</div>
+			<button type="button" class="btn btn-primary" ng-click="postData(postObj)">Post Data</button>
+			<br> <br>
+			<hr/>
+		</div>
+	</div>
+
+</div>

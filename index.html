@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="imgui">
+	<head>
+		<title>Angular PopUp Service</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Disable phone number detection on iOS.  -->
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			
+			<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type='text/css'>
+			<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type='text/css'>
+			<!-- Components -->
+			<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+			<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+			<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+			
+			<!-- Core module Dependency -->
+			<script type="text/javascript" src="dist/angularPopService.min.js"></script>
+			<!-- Angular controller Code -->
+			<script type="text/javascript" src="sample/app.js"></script>
+			
+	</head>
+			<body ng-controller="mainCtrl">
+				<ng-include src="'sample/home.html'"></ng-include>
+			</body>
+</html>

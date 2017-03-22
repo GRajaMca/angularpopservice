@@ -5,16 +5,16 @@ Angular PopService is providing custom Bootstrap Modal Service in Angular -- sup
 2. [Developing](#developing)
 3. [Note](#note)
 4. [Thanks](#thanks)
-5. [Contact] (#contact)
+5. [Contact](#contact)
 
 ## Usage
 
 Install with Bower (or NPM):
 
 ```bash
-bower install angularPopService
+bower install angularpopservice
 # or...
-npm install angularPopService
+npm install angularpopservice
 ```
 
 Then reference the minified script:

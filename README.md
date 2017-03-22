@@ -5,6 +5,7 @@ Angular PopService is providing custom Bootstrap Modal Service in Angular -- sup
 2. [Developing](#developing)
 3. [Note](#note)
 4. [Thanks](#thanks)
+5. [Contact] (#contact)
 
 ## Usage
 
@@ -22,7 +23,7 @@ Then reference the minified script:
 <script src="bower_components/angularPopService/dist/angularPopService.min.js"></script>
 ```
 
-## developing
+## Developing
 Specify the angularPopService as a dependency of your application:
 
 ```js
@@ -185,7 +186,7 @@ $scope.postData = function(data) {
 	};
 ```  
 
-## note
+## Note
 
 Try to use the angularPopService in sample how we provided,if you are passing the data or Object to the Modal view use 3rd parameter of popService.showModal function,and you will get the data into the body object in Modal View
 
@@ -194,6 +195,10 @@ If you are collecting input from Modal View bind the object to data and collect 
 Check out the above sample for your use..
 
 
-## thanks
+## Thanks
 
 The special Thanks to angular modal service,this is inspired from angular modal service 
+
+## Contact 
+
+Reach me on (https://www.linkedin.com/in/graja-mca-15445286/)

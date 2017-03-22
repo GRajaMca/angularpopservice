@@ -1,5 +1,5 @@
 # angularPopService
-Angular PopService is providing custom Bootstrap Modal Service in Angular -- supports creating popups and modals via a service. See [a quick fiddle](http://jsfiddle.net/dwmkerr/8MVLJ/) or a full set of samples at [https://github.com/GRajaMca/angularPopService/](https://github.com/GRajaMca/angularPopService/).
+Angular PopService is providing custom Bootstrap Modal Service in Angular -- supports creating popups and modals via a service. See [a quick fiddle](http://jsfiddle.net/dwmkerr/8MVLJ/) or a full set of samples at [https://github.com/GRajaMca/angularpopservice/](https://github.com/GRajaMca/angularpopservice/).
 
 1. [Usage](#usage)
 2. [Developing](#developing)
@@ -20,7 +20,7 @@ npm install angularpopservice
 Then reference the minified script:
 
 ```html
-<script src="bower_components/angularPopService/dist/angularPopService.min.js"></script>
+<script src="bower_components/angularpopservice/dist/angularpopservice.min.js"></script>
 ```
 
 ## Developing

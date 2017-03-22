@@ -21,16 +21,19 @@ Then reference the minified script:
 <script src="bower_components/angularPopService/dist/angularPopService.min.js"></script>
 ```
 
-Specify the modal service as a dependency of your application:
+Specify the angularPopService as a dependency of your application:
 
 ```js
-var app = angular.module('sampleapp', ['angularPopService']);
+angular.module('imgui', [ 'angularPopService' ]).controller('mainCtrl',
+		MainCtrl);
+
+MainCtrl.$inject = [ '$scope', '$rootScope', 'popService' ];
 ```
 
-Now just inject the modal service into any controller, service or directive where you need it.
+Now just inject the angularPopService into any controller, service or directive where you need it.
 
 ```js
-app.controller('SampleController', ["$scope", "popService", function($scope, popService) {
+function MainCtrl($scope, $rootScope, popService) {
 
   //$scope.alert function is used provide simple bootstrap alert
  	$scope.alert = function() {
@@ -43,5 +46,57 @@ app.controller('SampleController', ["$scope", "popService", function($scope, pop
 	};
   
 
-}]);
+};
 ```
+
+angularPopService is Customized Bootstrap Modal,it works everything as JSON and templateUrl what you are going to provide
+
+Now This sample is used to provide warning message to the end user and get the response from user,if the user said yes it will go to next step else break the process
+
+```htm
+//Template Url
+<div class="modal fade">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">{{title}}</h4>
+      </div>
+      <div class="modal-body">
+        <p>{{warning}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="close()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+```js
+	//$scope.warning function is used to provide warning message
+	$scope.Warning = function() {
+		//popService.showModal("title","message","optional","optional","templateUrl");
+		//for templateUrl checkout our sample and use the same format of close the window and buttons
+		popService.showModal("Warning",
+				"Are you Sure do you want to Process ??", "", "",
+				"sample/popup/warning.html").then(function(data) {
+				//data is the response from angularPopService
+			if (angular.isDefined(data.action)) {
+				var temp = "Not Process";
+				//if the response is true then it will move further else break
+				if (angular.equals(data.action, true)) {
+					var temp = "Process";
+				}
+				$scope.warningMessage = "You Said to " + temp;
+			}
+			console.log(data);
+		});
+	};
+	
+```
+
+
+
+

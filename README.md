@@ -18,37 +18,30 @@ npm install angular-popUp-service
 Then reference the minified script:
 
 ```html
-<script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>
+<script src="bower_components/angularPopService/dist/angularPopService.min.js"></script>
 ```
 
 Specify the modal service as a dependency of your application:
 
 ```js
-var app = angular.module('sampleapp', ['angularModalService']);
+var app = angular.module('sampleapp', ['angularPopService']);
 ```
 
 Now just inject the modal service into any controller, service or directive where you need it.
 
 ```js
-app.controller('SampleController', ["$scope", "ModalService", function($scope, ModalService) {
+app.controller('SampleController', ["$scope", "popService", function($scope, popService) {
 
-  $scope.showAModal = function() {
-
-  	// Just provide a template url, a controller and call 'showModal'.
-    ModalService.showModal({
-      templateUrl: "yesno/yesno.html",
-      controller: "YesNoController"
-    }).then(function(modal) {
-      // The modal object has the element built, if this is a bootstrap modal
-      // you can call 'modal' to show it, if it's a custom modal just show or hide
-      // it as you need to.
-      modal.element.modal();
-      modal.close.then(function(result) {
-        $scope.message = result ? "You said Yes" : "You said No";
-      });
-    });
-
-  };
+  //$scope.alert function is used provide simple bootstrap alert
+ 	$scope.alert = function() {
+    //popService is the service provider of angularPopService
+    //popService.showModal("Title","content","optional","optional","templateUrl")
+		popService.showModal("Alert",
+				"This is simple Alert message", "", "",
+				"sample/popup/alert.html").then(function(data) {
+		});
+	};
+  
 
 }]);
 ```

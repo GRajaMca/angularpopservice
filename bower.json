@@ -1,6 +1,6 @@
 {
-  "name": "popupservice",
-  "description": "popUpService for PopUp",
+  "name": "angularPopService",
+  "description": "angularPopService for PopUp",
   "main": "",
   "authors": [
     "Raja G(grajamcas@gmail.com)"

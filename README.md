@@ -201,4 +201,4 @@ The special Thanks to angular modal service,this is inspired from angular modal 
 
 ## Contact 
 
-Reach me on (https://www.linkedin.com/in/graja-mca-15445286/)
+Reach me on (https://www.linkedin.com/in/grajamca/)
